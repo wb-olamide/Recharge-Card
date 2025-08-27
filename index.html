@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recharge HTML</title>
+    <link rel="stylesheet" href="/src/output.css" />
+  </head>
+  <body class="bg-gray-700">
+    <div class="w-[98%] sm:w-[95%] md:w-[90%] lg:w-[70%] m-auto">
+      <div>
+        <h1 class="text-4xl font-bold text-center mb-5">RECHARGE CARD</h1>
+      </div>
+      <div class="md:flex space-y-10 justify-between mb-10">
+        <div class="md:w-[45%] w-[90%] space-y-4">
+          <div>
+            <div><h2 class="text-lg font-medium">Network:</h2></div>
+            <div>
+              <select
+                name="network"
+                id="network-select"
+                class="w-[100%] h-[40px] border-2 rounded-lg px-1 inpHov"
+              >
+                <option value="">Select your network</option>
+                <option value="MTN">MTN</option>
+                <option value="Glo">Glo</option>
+                <option value="Airtel">Airtel</option>
+                <option value="9Mobile">9Mobile</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <div><h2 class="text-lg font-medium">Amount:</h2></div>
+            <div>
+              <select
+                name="network"
+                id="amount-select"
+                class="w-[100%] h-[40px] border-2 rounded-lg px-1 inpHov"
+              >
+                <option value="">Select amount</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <div><h2 class="text-lg font-medium">Recharge Code:</h2></div>
+            <div>
+              <input
+                id="codegenerate"
+                type="text"
+                class="w-[100%] h-[40px] border-2 rounded-lg px-1 inpHov"
+                disabled
+              />
+            </div>
+          </div>
+          <div>
+            <button
+              id="generateRand"
+              class="px-3 py-2 text-white text-lg font-medium rounded-lg bg-blue-600"
+            >
+              Generate
+            </button>
+            <button
+              id="savebtn"
+              class="px-3 py-2 text-white text-lg font-medium rounded-lg bg-blue-600"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+        <div class="md:w-[45%] w-[90%] space-y-3">
+          <div>
+            <div><h2 class="text-lg font-medium">Pin:</h2></div>
+            <div>
+              <input
+                id="inputPin"
+                type="text"
+                class="w-[100%] h-[40px] border-2 rounded-lg px-1 inpHov"
+              />
+            </div>
+          </div>
+          <div>
+            <button
+              id="cardRecharge"
+              class="px-3 py-2 text-white text-lg font-medium rounded-lg bg-blue-600"
+            >
+              Recharge
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-x-scroll lg:overflow-hidden">
+        <table>
+          <thead>
+            <tr class="text-xl">
+              <th class="border px-3">S/N</th>
+              <th class="border px-3">Network</th>
+              <th class="border px-3">Amount</th>
+              <th class="border px-3">Pin</th>
+              <th class="border px-3">Recharge Code</th>
+              <th class="border px-3">Status</th>
+              <th class="border px-3">Date Created</th>
+              <th class="border px-3">Date Used</th>
+              <th class="border px-3">Action</th>
+            </tr>
+          </thead>
+          <tbody id="display"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./recharge.js"></script>
+  </body>
+</html>
